@@ -1,3 +1,4 @@
+#This question is solved
 class Solution:
     def isNumber(self, s: str) -> bool:
         if s.count("e")==1 :
