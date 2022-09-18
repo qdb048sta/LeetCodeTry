@@ -1,0 +1,7 @@
+rec={}
+def fibo(n):
+    if n==1:
+    elif n==2:
+    else:
+        
+    
