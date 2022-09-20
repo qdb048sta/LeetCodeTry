@@ -1,7 +1,28 @@
-rec={}
-def fibo(n):
-    if n==1:
-    elif n==2:
-    else:
+class Solution:     
+    def count(self,n):
+        if n%3==0:
+            return n//3
+        elif n%3==1:
+            return ((n//3)-1)+2
+        elif n%3==2:
+            return (n//3)+1
+    def minimumRounds(self, tasks: List[int]) -> int:
+        hd={}
+        for i in tasks:
+            if i not in hd:
+                hd[i]=1
+            else:
+                hd[i]=hd[i]+1
         
-    
+        total=0
+        for k in hd:
+            if hd[k]==1:
+                total=-1
+                break
+            else:
+                total=total+self.count(hd[k])
+        return total
+            
+            
+        
+        
