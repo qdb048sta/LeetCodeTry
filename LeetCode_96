@@ -1,11 +1,13 @@
 #Leetcode 96
 #Require knowledge: Catalan Number
-cat_dict={0:1}
 def cat_num(n):
+    cat_dict={0:1}
     t=0
     while t<=n:
-        if t not in cat_dict:
-            cat_dict[t]=2*(2t+1)
+        if t+1 not in cat_dict:
+            cat_dict[t+1]=( (2*(2*t+1))*(cat_dict[t])/(t+2) )
         t=t+1
-        print(cat_dict)
-print(cat_num(10))
+        print(cat_dict.keys())
+
+    return cat_dict[cat_dict.keys()[-2]]
+print(cat_num(3))
